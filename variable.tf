@@ -7,7 +7,7 @@ variable "gateway_id" {
 }
   
 variable "ami"  {
-     default = "ami-000a8866eb40ca83c"
+     default = "ami-07683a44e80cd32c5"
 }
 variable "instance_type" {
     default = "t2.micro"
