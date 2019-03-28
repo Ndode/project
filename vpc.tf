@@ -6,4 +6,9 @@ resource "aws_vpc" "project" {
        Name = "project"
     }
 
+resource "aws_eip" "nat" {
+   count = 1
+
+single_nat_gateway = true
+}
   }
