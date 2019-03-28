@@ -6,6 +6,7 @@ resource "aws_instance" "centos" {
     key_name = "${var.key_name}"
     associate_public_ip_address = true
     vpc_security_group_ids = ["sg-0f03f147fa2e32910"]
+    count = "${var.count}"
     
     tags = {
         Name = "centos7"
