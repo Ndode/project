@@ -1,9 +1,8 @@
 resource "aws_instance" "centos" {
     ami = "${var.ami}"
-    instance_type = "${var.instance_type}"
-    availability_zone = "eu-west-1c"
+    instance_type = "t2.micro"
     key_name = "${var.key_name}"
-    subnet_id = "${var.subnet_id}"
+    subnet_id = "${aws_subnet.pubsubnet.id}"
     associate_public_ip_address = true
     vpc_security_group_ids = ["${aws_security_group.websg.id}"]
     count = "${var.count}"
