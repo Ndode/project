@@ -1,4 +1,4 @@
-resource "aws_instance" "centos7" {
+resource "aws_instance" "centos" {
     ami = "${var.ami}"
     instance_type = "${var.instance_type}"
     subnet_id = "${var.subnet_id}"
@@ -7,8 +7,11 @@ resource "aws_instance" "centos7" {
     associate_public_ip_address = true
     vpc_security_group_ids = ["${aws_security_group.websg.id}"]
     count = "${var.count}"
-    
+
     tags = {
-        Name = "centos7"
+      Name = "centos"
     }
+    
+    
+    
 }
