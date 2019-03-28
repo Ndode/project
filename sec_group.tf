@@ -2,6 +2,10 @@ resource "aws_security_group" "websg" {
     description = "allow http && ssh connections"
     vpc_id = "${var.vpc_id}"
 
+    tags = {
+        Name = "websg"
+    }
+
     ingress {
         from_port = 80
         to_port = 80
