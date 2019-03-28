@@ -5,4 +5,6 @@ variable "vpc_id" {
 variable "gateway_id" {
     default = "igw-052633b9a89dd35d7"
 }
+  
+
 
