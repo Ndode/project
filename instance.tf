@@ -1,4 +1,4 @@
-resource "aws_instance" "centos" {
+resource "aws_instance" "web" {
     ami = "${var.ami}"
     instance_type = "t2.micro"
     key_name = "${var.key_name}"
@@ -8,7 +8,7 @@ resource "aws_instance" "centos" {
     count = "${var.count}"
 
     tags = {
-      Name = "centos"
+      Name = "web"
     }
     
     
