@@ -9,6 +9,8 @@ resource "aws_route_table" "pubrt" {
      Name = "pubrt" 
   }
 
+}
+
 resource "aws_route_table" "privrt" {
     vpc_id = "${var.vpc_id}"
 
