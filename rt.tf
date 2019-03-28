@@ -3,7 +3,7 @@ resource "aws_route_table" "pubrt" {
 
   route {
       cidr_block = "0.0.0.0/0"
-      gateway_id = "${var.aws_internet_gateway}"   
+      gateway_id = "${var.gateway_id}"   
   }
   tags = {
      Name = "pubrt" 
